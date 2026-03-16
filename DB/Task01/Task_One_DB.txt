@@ -1,0 +1,53 @@
+create table Manger contain
+
+id, name , age , birth_date , address
+----------------------------------
+alter table manger drop address column
+alter table manger add column (city_address, street) 
+-------------------------------------
+modify column name to full_name
+-------------------------------------
+make this table just for read
+-------------------------------
+create table same as  Manger with name Owner
+just has colum id, name, birth_date 
+----------------------------------------
+rename manger table name to Master
+-----------------------------------------
+drop all tables  
+
+
+
+
+
+
+CREATE TABLE MANAGER (
+    MANAGER_ID VARCHAR2(3) NOT NULL,
+    MANAGER_NAME VARCHAR2(50),
+    MANAGER_AGE NUMBER(2),
+    MANAGER_DATE_BIRTH DATE,
+    MANAGER_ADDRESS VARCHAR2(150),
+    CONSTRAINT PK_MANAGER PRIMARY KEY (MANAGER_ID)
+);
+
+
+
+ALTER TABLE MANAGER DROP COLUMN MANAGER_ADDRESS;
+
+ALTER TABLE MANAGER ADD (MANAGER_STREET VARCHAR2(50),
+MANAGER_CITY VARCHAR2(50)
+);
+
+
+ALTER TABLE MANAGER RENAME COLUMN MANAGER_NAME TO MANAGER_FULL_NAME;
+
+ALTER TABLE MANAGER READ WRITE;
+ALTER TABLE MANAGER READ ONLY ;
+
+CREATE TABLE OWNER (ID,NAME,DATE_BIRTH) AS SELECT MANAGER_ID , MANAGER_FULL_NAME , MANAGER_DATE_BIRTH FROM MANAGER;
+
+
+DROP TABLE OWNER ;
+
+INSERT INTO MANAGER VALUES ('102','Salem',25,'01-JAN-1989','ELHARAM','Giza');
+COMMIT;   
