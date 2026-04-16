@@ -1,0 +1,21 @@
+-- Q1. Create a table STUDENTS with columns: name, marks.
+-- Q2. Insert 5 sample students with marks.
+-- Q3. Use CASE to assign grades: 
+--     >=90 => 'A', 80–89 => 'B', 70–79 => 'C', else => 'F'
+
+
+
+CREATE TABLE STUDENT (NAME VARCHAR2(50),MARKS NUMBER);
+INSERT INTO STUDENT (NAME, MARKS) VALUES ('HOSSAM', 95);
+INSERT INTO STUDENT (NAME, MARKS) VALUES ('AHMED', 30);
+INSERT INTO STUDENT (NAME, MARKS) VALUES ('FARID', 73);
+COMMIT ;
+SELECT * FROM STUDENT ; 
+
+SELECT NAME ,CASE  
+WHEN MARKS >= 90 THEN 'A'  
+WHEN MARKS >= 80 THEN 'B' 
+WHEN MARKS >= 70 THEN 'C'  
+WHEN MARKS >= 60 THEN 'D' 
+ELSE 'F' 
+END AS GRADE  FROM STUDENT; 

@@ -1,0 +1,13 @@
+-- Q1. Use DECODE to achieve the same result as the CASE example above.
+-- Q2. Create a table ORDERS with a column status ('P', 'S', 'D').
+-- Q3. Use DECODE to display full form of status:
+--     'P' => 'Pending', 'S' => 'Shipped', 'D' => 'Delivered'
+
+
+
+
+SELECT NAME , DECODE(s.MARKS , 30 , 'F') GRADE  FROM STUDENT s ;
+CREATE TABLE ORDERS (STATUS VARCHAR2(5));
+INSERT INTO ORDERS (STATUS) VALUES ('D');
+SELECT * FROM ORDERS ;
+SELECT STATUS , DECODE(STATUS , 'P' , 'PENDING' , 'S' , 'Shipped', 'D', 'Delivered') FROM ORDERS;

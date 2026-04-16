@@ -1,0 +1,19 @@
+
+-- Q1. Use REPLACE to replace the letter 'a' with '@' in the word 'database'.
+SELECT REPLACE('database', 'a', '@') FROM DUAL;
+
+-- Q2. Use REPLACE to replace a full word in a string (e.g., "old" with "new").
+SELECT REPLACE('OLDTOWN', 'OLD', 'NEW') FROM DUAL;
+-- Q3. Create a table PRODUCT with a product_name column, and insert 3 sample products.
+
+CREATE TABLE PRODUCT(PRODUCT_NAME VARCHAR2(60));
+INSERT INTO PRODUCT PRODUCT_NAME VALUES ('BOOK');
+INSERT INTO PRODUCT PRODUCT_NAME VALUES ('WATCH');
+INSERT INTO PRODUCT PRODUCT_NAME VALUES ('LAPTOP');
+COMMIT;
+SELECT * FROM PRODUCT;
+
+-- Q4. Use LPAD to format product names to 15 characters by padding with '*' on the left.
+-- Q5. Use RPAD to format product names to 15 characters by padding with '#' on the right.
+SELECT LPAD(PRODUCT_NAME , 15 , '*') FROM PRODUCT;
+SELECT RPAD(PRODUCT_NAME , 10 , '#') FROM PRODUCT;
