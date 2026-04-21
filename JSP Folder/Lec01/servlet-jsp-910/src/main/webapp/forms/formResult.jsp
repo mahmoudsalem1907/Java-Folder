@@ -23,8 +23,8 @@ body {
 
 
 .data:hover {
-    background-color: #007BFF;  /* dark blue */
-    color: white;              /* عشان الكلام يبان */
+    background-color: #007BFF;  
+    color: white;              
     cursor: pointer;
 }
 
@@ -57,7 +57,7 @@ h2 {
     String fname = request.getParameter("fname");
     String lname = request.getParameter("lname");
     String password = request.getParameter("password");
-    String age = request.getParameter("age");
+    Integer age = Integer.parseInt(request.getParameter("age"));
     String addressRadio = request.getParameter("addressRadio");
     String addressSelect = request.getParameter("addressSelect");
 %>

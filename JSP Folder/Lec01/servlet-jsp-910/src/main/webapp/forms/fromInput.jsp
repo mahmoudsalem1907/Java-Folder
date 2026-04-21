@@ -67,7 +67,7 @@ button:hover {
 
 <h2>Form</h2>
 
-<form action="formResult.jsp" method="post">
+<form action="formResult.jsp" method="get">
 
     <label>First name:</label>
     <input type="text" name="fname">
@@ -84,7 +84,7 @@ button:hover {
     <label>Address (Radio):</label>
     <div class="radio-group">
         <input type="radio" name="addressRadio" value="cairo"> Cairo
-        <input type="radio" name="addressRadio" value="alex"> Alex
+        <input type="radio" name="addressRadio" value="alexds"> Alex
         <input type="radio" name="addressRadio" value="menofia"> Menofia
     </div>
 
